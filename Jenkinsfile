@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-            sh "make -c prog"
+            sh "make -C prog"
                 echo 'Build stage completed'
             }
         }
