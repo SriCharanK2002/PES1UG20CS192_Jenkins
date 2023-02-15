@@ -13,10 +13,10 @@ pipeline {
                 echo 'Testing stage completed'
             }
         }
-        post {
+    }
+    post {
             failure {
                 echo 'Pipeline Failed'
             }
         }
-    }
 }
