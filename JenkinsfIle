@@ -3,22 +3,14 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+            sh "make -c prog"
                 echo 'Build stage completed'
             }
         }
         stage('Test') {
             steps {
+                sh "/var/jenkins_home/workspace//main/hello_exec"
                 echo 'Testing stage completed'
-                post {
-                    always {
-                        echo 'I will always say Hello again!'
-                    }
-                }
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploy stage completed'
             }
         }
         post {
